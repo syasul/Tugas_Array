@@ -5,6 +5,8 @@
  */
 package com.mycompany.tugas_array;
 
+import java.util.Scanner;
+
 /**
  *
  * @author User
@@ -12,30 +14,39 @@ package com.mycompany.tugas_array;
 public class Ordo3x3 {
     public static void main(String []args){
         
-        int matrix1[][] = new int[3][3];
-        matrix1[0][0]=5;
-        matrix1[0][1]=9;
-        matrix1[0][2]=4;
-        matrix1[1][0]=10;
-        matrix1[1][1]=8;
-        matrix1[1][2]=3;
-        matrix1[2][0]=15;
-        matrix1[2][1]=7;
-        matrix1[2][2]=5;
+        Scanner masukan = new Scanner(System.in);
         
-        int matrix2[][] = new int[3][3];
-        matrix2[0][0]=3;
-        matrix2[0][1]=5;
-        matrix2[0][2]=9;
-        matrix2[1][0]=12;
-        matrix2[1][1]=6;
-        matrix2[1][2]=3;
-        matrix2[2][0]=12;
-        matrix2[2][1]=5;
-        matrix2[2][2]=1;
+        int matrix1[] [] = new int[3][3]; //jumlah kurung siku untuk melihat dimensi dari array
         
+        int matrix2[] [] = new int[3][3];
         
         System.out.println("Matrix 1");
+        
+        for (int i = 0; i < matrix1.length; i++){
+            for (int j = 0; j < matrix1[0].length; j++)
+            {
+                System.out.println("Masukkan isi Index ke [" + i +"][" +j +"] : ");
+                matrix1[i][j] = masukan.nextInt();
+            }
+            System.out.println("");
+        }
+        
+        System.out.println("");
+        
+        System.out.println("");
+        System.out.println("Matrix 2");
+        
+        for (int i = 0; i < matrix2.length; i++){
+            for (int j = 0; j < matrix2[0].length; j++)
+            {
+                System.out.println("Masukkan isi Index ke [" + i +"][" +j +"] : ");
+                matrix2[i][j] = masukan.nextInt();
+            }
+            System.out.println("");
+        }
+        
+        System.out.println("");
+        System.out.println("Matrix 1 ");
         
         for (int i = 0; i < matrix1.length; i++){
             for (int j = 0; j < matrix1[0].length; j++)
@@ -46,7 +57,7 @@ public class Ordo3x3 {
         }
         
         System.out.println("");
-        System.out.println("Matrix 2");
+        System.out.println("Matrix 2 ");
         
         for (int i = 0; i < matrix2.length; i++){
             for (int j = 0; j < matrix2[0].length; j++)
@@ -55,6 +66,8 @@ public class Ordo3x3 {
             }
             System.out.println("");
         }
+        
+        
         
         System.out.println("");
         System.out.println("Penjumlahan");
