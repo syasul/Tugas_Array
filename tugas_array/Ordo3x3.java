@@ -91,13 +91,25 @@ public class Ordo3x3 {
             System.out.println("");
         }
         
-        System.out.println("");
-        System.out.println("Perkalian");
+        int[][] hasilKali = new int[matrix1.length][matrix2[0].length];
         
         for (int i = 0; i < matrix1.length; i++){
-            for (int j = 0; j < matrix1[0].length; j++){
-                int hasil = matrix1[i][j] * matrix2[i][j];
-                System.out.print(hasil + " ");
+            for (int j = 0; j < matrix2[0].length; j++){
+                int buffer = 0;
+                for (int k = 0; k < matrix1[0].length; k++){
+                 buffer += matrix1[i][k] * matrix2[k][j];
+                
+                }  
+                hasilKali[i][j] = buffer;
+            }
+            System.out.println("");
+        }
+        
+        System.out.println("Perkalian");
+        for (int i = 0; i < hasilKali.length; i++){
+            for (int j = 0; j < hasilKali[0].length; j++)
+            {
+                System.out.print(hasilKali[i][j] + " ");
             }
             System.out.println("");
         }
